@@ -15,17 +15,12 @@
   position: relative;
 }
 
-.login__container::before{
-  content: "";
-  display: block;
-  position: absolute;
-  border-radius: 100% 50%;
-  width: 100%;
-  height: 80px;
-  background-color: white;
-  right: -5px;
-  top: 40px;
-
+.login > .login__container > button {
+  width: 300px;
+  background-color: #738adb;
+  color: #eff2f5;
+  font-weight: 800;
+  margin-top: 20px;
 }
 
 .login > .login__container > button:hover {

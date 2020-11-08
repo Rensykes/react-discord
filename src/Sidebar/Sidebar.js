@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './Sidebar.css'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AddIcon from '@material-ui/icons/Add';
-import SidebarChannel from './SidebarChannel';
+import SidebarChannel from '../Components/SidebarChannel';
 import SignalCellularAltIcon from '@material-ui/icons/SignalCellularAlt';
 import CallIcon from '@material-ui/icons/Call';
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
@@ -11,8 +11,8 @@ import HeadsetIcon from '@material-ui/icons/Headset';
 import SettingsIcon from '@material-ui/icons/Settings';
 import { Avatar } from '@material-ui/core';
 import { useSelector } from 'react-redux';
-import { selectUser } from './features/userSlice';
-import db, { auth } from './firebase';
+import { selectUser } from '../../features/userSlice';
+import db, { auth } from '../../firebase';
 
 export default function Sidebar() {
     const user = useSelector(selectUser);

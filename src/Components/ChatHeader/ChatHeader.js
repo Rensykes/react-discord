@@ -1,5 +1,5 @@
 import React from 'react'
-import './ChatHeader.css'
+import classes from './ChatHeader.module.css'
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import EditLocationRoundedIcon from '@material-ui/icons/EditLocationRounded';
 import PeopleAltRoundedIcon from '@material-ui/icons/PeopleAltRounded';
@@ -7,18 +7,18 @@ import SearchRoundedIcon from '@material-ui/icons/SearchRounded';
 import SendRoundedIcon from '@material-ui/icons/SendRounded';
 import HelpRoundedIcon from '@material-ui/icons/HelpRounded';
 
-function ChatHeader({channelId, channelName}) {
+function ChatHeader({ channelName }) {
     return (
-        <div className="chatHeader">
-            <div className="chatHeader__left">
-                <h3><span className="chatHeader__hash">#</span>{channelName}</h3>
+        <div className={classes.chatHeader}>
+            <div className={classes.chatHeader__left}>
+                <h3><span className={classes.chatHeader__hash}>#</span>{channelName}</h3>
             </div>
-            <div className="chatHeader__right">
+            <div className={classes.chatHeader__right}>
                 <NotificationsIcon />
                 <EditLocationRoundedIcon />
                 <PeopleAltRoundedIcon />
 
-                <div className="chatHeader__search">
+                <div className={classes.chatHeader__search}>
                     <input placeholder="Search" />
                     <SearchRoundedIcon />
                 </div>

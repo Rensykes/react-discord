@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Chat.css';
+import classes from './Chat.module.css';
 import ChatHeader from '../../Components/ChatHeader/ChatHeader';
 import Message from '../../Components/Message/Message';
 import AddCircleIcon from '@material-ui/icons/AddCircle';
@@ -42,24 +42,25 @@ function Chat() {
             })
 
         setInput("");
+        return false;
     }
 
     return (
-        <div className="chat">
+        <div className={classes.chat}>
             <ChatHeader channelId={channelId} channelName={channelName} />
 
-            <div className="chat__messages">
+            <div className={classes.chat__messages}>
                 {messages.map(message => (<Message key={message.timestamp} user={message.user} message={message.message} timestamp={message.timestamp}/>))}
             </div>
 
-            <div className="chat__input">
+            <div className={classes.chat__input}>
                 <AddCircleIcon fontSize="large" />
                 <form>
                     <input value={input} onChange={e => setInput(e.target.value)} disabled={!channelId} placeholder={`Message #` + channelName} />
-                    <button className="chat__inputButton" type="submit" onClick={sendMessage}>Send Message</button>
+                    <button className={classes.chat__inputButton} type="submit" onClick={sendMessage}>Send Message</button>
                 </form>
 
-                <div className="chat__inputIcons">
+                <div className={classes.chat__inputIcons}>
                     <GifIcon fontSize="large" />
                     <CardGiftcardIcon fontSize="large" />
                     <EmojiEmotionsIcon fontSize="large" />

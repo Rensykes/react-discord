@@ -5,11 +5,27 @@
   width: 100%;
 }
 
-.login > .login__container > button {
-  width: 300px;
-  background-color: #738adb;
-  color: #eff2f5;
-  font-weight: 800;
+.login__container {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(#434547 , #23272a);
+  padding: 50px 30px;
+  align-items: center;
+  border-radius: 20px;
+  position: relative;
+}
+
+.login__container::before{
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 100%;
+  height: 80px;
+  background-color: white;
+  right: -5px;
+  top: 40px;
+
 }
 
 .login > .login__container > button:hover {
@@ -20,5 +36,5 @@
 
 .login > .login__container > div > img {
   object-fit: contain;
-  height: 300px;
+  height: 200px;
 }

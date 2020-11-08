@@ -5,20 +5,20 @@
   width: 100%;
 }
 
-.login > button {
+.login > .login__container > button {
   width: 300px;
   background-color: #738adb;
   color: #eff2f5;
   font-weight: 800;
 }
 
-.login > button:hover {
+.login > .login__container > button:hover {
   width: 300px;
   background-color: black;
   color: #738adb;
 }
 
-.login > div > img {
+.login > .login__container > div > img {
   object-fit: contain;
-  height: 150px;
+  height: 300px;
 }

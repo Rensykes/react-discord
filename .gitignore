@@ -22,7 +22,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-src/config
+# firebase
+src/config/firebaseConfig.js
 .firebaserc
 .firebase/hosting.YnVpbGQ.cache
 firebase.json
